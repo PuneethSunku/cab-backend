@@ -15,7 +15,13 @@ const io = socketIo(server);
 
 connectDB();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: 'http://localhost:3000', // Replace with your frontend domain in production
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+    credentials: true, // Allow cookies if required
+  })
+);
 app.use(express.json());
 
 // Routes
