@@ -17,7 +17,7 @@ connectDB();
 
 app.use(
   cors({
-    origin: 'http://localhost:3000', // Replace with your frontend domain in production
+    origin: 'https://cab-frontend-iota.vercel.app', // Replace with your frontend domain in production
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
     credentials: true, // Allow cookies if required
   })
